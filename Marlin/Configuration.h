@@ -43,16 +43,16 @@ RN13S           - плата Robin Nano-s 1.3
 
 #if PRINTER_DRV_TYPE == RN11_ALL_2208
   #define USR_E0_DIR true
-  #define USR_E0_TYPE TMC2208_STANDALONE
+  #define USR_E0_TYPE TMC2209//TMC2208_STANDALONE
   
   #define USR_X_DIR true
-  #define USR_X_TYPE TMC2208_STANDALONE
+  #define USR_X_TYPE TMC2209//TMC2208_STANDALONE
   
   #define USR_Y_DIR false
-  #define USR_Y_TYPE TMC2208_STANDALONE
+  #define USR_Y_TYPE TMC2209//TMC2208_STANDALONE
   
   #define USR_Z_DIR true
-  #define USR_Z_TYPE TMC2208_STANDALONE
+  #define USR_Z_TYPE TMC2209//TMC2208_STANDALONE
 #endif
 
 #if PRINTER_DRV_TYPE == RN11_A4988
@@ -523,7 +523,7 @@ RN13S           - плата Robin Nano-s 1.3
  * Enable and connect the power supply to the PS_ON_PIN.
  * Specify whether the power supply is active HIGH or active LOW.
  */
-//#define PSU_CONTROL
+#define PSU_CONTROL
 //#define PSU_NAME "Power Supply"
 
 #if ENABLED(PSU_CONTROL)

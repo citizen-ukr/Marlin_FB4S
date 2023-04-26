@@ -100,6 +100,7 @@ https://sergey1560.github.io/fb4s_howto/mks_pwc/
     #define KILL_PIN                          PA2
     #define KILL_PIN_STATE                    HIGH
     #define PS_ON_PIN                         PE5
+
 #endif
 
 #if HAS_FSMC_TFT
