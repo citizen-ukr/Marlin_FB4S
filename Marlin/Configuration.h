@@ -45,7 +45,7 @@ RN13S           - плата Robin Nano-s 1.3
   #define USR_E0_DIR true
   #define USR_E0_TYPE TMC2208_STANDALONE
   
-  #define USR_X_DIR false
+  #define USR_X_DIR true
   #define USR_X_TYPE TMC2208_STANDALONE
   
   #define USR_Y_DIR false
@@ -527,10 +527,10 @@ RN13S           - плата Robin Nano-s 1.3
 //#define PSU_NAME "Power Supply"
 
 #if ENABLED(PSU_CONTROL)
-  //#define MKS_PWC                 // Using the MKS PWC add-on
+  #define MKS_PWC                 // Using the MKS PWC add-on
   //#define PS_OFF_CONFIRM          // Confirm dialog when power off
   //#define PS_OFF_SOUND            // Beep 1s when power off
-  #define PSU_ACTIVE_STATE LOW      // Set 'LOW' for ATX, 'HIGH' for X-Box
+  #define PSU_ACTIVE_STATE HIGH      // Set 'LOW' for ATX, 'HIGH' for X-Box
 
   //#define PSU_DEFAULT_OFF               // Keep power off until enabled directly with M80
   //#define PSU_POWERUP_DELAY      250    // (ms) Delay for the PSU to warm up to full power
@@ -658,7 +658,7 @@ RN13S           - плата Robin Nano-s 1.3
  *   999 : Dummy Table that ALWAYS reads 100°C or the temperature defined below.
  *
  */
-#define TEMP_SENSOR_0 1
+#define TEMP_SENSOR_0 5
 #define TEMP_SENSOR_1 0
 #define TEMP_SENSOR_2 0
 #define TEMP_SENSOR_3 0
@@ -741,7 +741,7 @@ RN13S           - плата Robin Nano-s 1.3
 // Above this temperature the heater will be switched off.
 // This can protect components from overheating, but NOT from shorts and failures.
 // (Use MINTEMP for thermistor short/failure protection.)
-#define HEATER_0_MAXTEMP 275
+#define HEATER_0_MAXTEMP 290
 #define HEATER_1_MAXTEMP 275
 #define HEATER_2_MAXTEMP 275
 #define HEATER_3_MAXTEMP 275
@@ -1223,7 +1223,7 @@ RN13S           - плата Robin Nano-s 1.3
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
+#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -1289,7 +1289,7 @@ RN13S           - плата Robin Nano-s 1.3
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 80, 80, 400, 400 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 800, 1360.6 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
